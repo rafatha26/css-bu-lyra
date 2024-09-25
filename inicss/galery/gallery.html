@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar img {
+            width: 150px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dropdown filter */
+        .filter-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .filter-container select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="imagesr.png" alt="Logo" />
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Articles</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Filter Dropdown -->
+        <div class="filter-container">
+            <label for="filter">Filter: </label>
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+            </select>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="images1.jpeg" alt="Image 1" />
+            <img src="images2.jpeg" alt="Image 2" />
+            <img src="images3.jpeg" alt="Image 3" />
+            <img src="images4.jpeg" alt="Image 4" />
+            <img src="images5.jpeg" alt="Image 5" />
+            <img src="images6jpeg.jpeg" alt="Image 6" />
+            <img src="images7.jpeg" alt="Image 7" />
+            <img src="images8.jpeg" alt="Image 8" />
+        </div>
+    </div>
+</body>
+
+</html>
